@@ -1,0 +1,103 @@
+.ratesSection {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.introText {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+.ratesContent {
+    margin-top: 2rem;
+}
+
+.ratesCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.rateCard {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rateCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rateIconContainer {
+    margin-right: 1.25rem;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0.25rem;
+}
+
+.rateIcon {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+}
+
+.rateDetails {
+    flex: 1;
+}
+
+.rateDetails h3 {
+    font-size: 1.25rem;
+    margin: 0 0 0.75rem;
+    color: #2d3748;
+}
+
+.rateDetails p {
+    margin: 0;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+.paymentOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.paymentMethod {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ratesCards {
+        grid-template-columns: 1fr;
+    }
+
+    .introText {
+        text-align: left;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rateCard {
+        flex-direction: column;
+    }
+
+    .rateIconContainer {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}

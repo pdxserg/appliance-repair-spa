@@ -1,0 +1,120 @@
+
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    /*background-image: url('/src/assets/images/gallery/bgc-logo.webp');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/assets/images/gallery/bgc-logo.webp');
+    background-color: rgba(0, 0, 0, 0.7);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain; /* or 'cover' if you want it to fill */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroContent {
+    color: white;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    transform: translateY(-50px); /* Move it up */
+}
+
+.heroContent h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heroContent p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heroCta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .heroContent h1 {
+        font-size: 2.5rem;
+    }
+
+    .heroContent p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroContent h1 {
+        font-size: 2rem;
+    }
+
+    .heroContent p {
+        font-size: 1rem;
+    }
+
+    .heroCta {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .heroContent h1 {
+        font-size: 2rem;
+    }
+
+    .heroContent p {
+        font-size: 1rem;
+    }
+
+    .heroCta {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: none;
+        /*background-color: rgba(0, 0, 0, 0.7);*/
+        /*background-position: bottom;*/
+        /*background-repeat: no-repeat;*/
+        /*background-size: contain; !* or 'cover' if you want it to fill *!*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .heroContent {
+        color: white;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 2rem;
+        transform: translateY(21px); /* Move it up */
+    }
+}
