@@ -15,7 +15,8 @@ const Header = ({ isScrolled, isNavOpen, toggleNav }: HeaderProps) => {
 			<div className={styles.container}>
 				<div className={styles.logo}>
 					<a href="#home">
-						<h1>RepairPro</h1>
+						<h1 className={styles.desktopTitle}>Kaspian Star Appliance & Fitness Repair</h1>
+						<h1 className={styles.mobileTitle}>KS Repair</h1>
 					</a>
 				</div>
 

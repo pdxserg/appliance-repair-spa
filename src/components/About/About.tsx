@@ -1,6 +1,7 @@
 // src/components/About/About.tsx
 import styles from './About.module.css';
 import { FiCheckCircle } from 'react-icons/fi';
+import avaImg from '@/assets/images/gallery/ava.webp'
 
 const About = () => {
 	return (
@@ -41,7 +42,7 @@ const About = () => {
 					</div>
 
 					<div className={styles.aboutImage}>
-						<img src="/src/assets/images/gallery/ava.webp" alt="Technician repairing an appliance" />
+						<img src={avaImg} alt="Technician repairing an appliance" />
 					</div>
 				</div>
 			</div>

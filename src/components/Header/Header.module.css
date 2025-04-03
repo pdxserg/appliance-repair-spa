@@ -60,7 +60,22 @@
     cursor: pointer;
 }
 
+
+.mobileTitle {
+    display: none;
+}
+
+
+
 @media (max-width: 768px) {
+
+    .desktopTitle {
+        display: none;
+    }
+    .mobileTitle {
+        display: block;
+    }
+
     .contactInfo {
         /* Changed from display: none to keep it visible */
         gap: 3rem;
