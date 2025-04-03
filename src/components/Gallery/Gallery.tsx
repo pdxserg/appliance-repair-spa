@@ -3,44 +3,22 @@ import { useState } from 'react';
 import styles from './Gallery.module.css';
 
 // In a real project, these would be actual images from your assets folder
+import fridgeImg from '@/assets/images/gallery/fridge.webp';
+import dishwasherImg from '@/assets/images/gallery/dishwasher2.webp';
+import dryerImg from '@/assets/images/gallery/dryer2.webp';
+import treadmillImg from '@/assets/images/gallery/treadmill.webp';
+import bikeImg from '@/assets/images/gallery/bike.webp';
+import ellipticalImg from '@/assets/images/gallery/elliptical.webp';
+
 const galleryImages = [
-	{
-		id: 1,
-		src: '/src/assets/images/gallery/fridge.webp',
-		alt: 'Refrigerator repair',
-		category: 'appliance'
-	},
-	{
-		id: 2,
-		src: '/src/assets/images/gallery/dishwasher2.webp',
-		alt: 'Dishwasher repair',
-		category: 'appliance'
-	},
-	{
-		id: 3,
-		src: '/src/assets/images/gallery/dryer2.webp',
-		alt: 'Dryer repair',
-		category: 'appliance'
-	},
-	{
-		id: 4,
-		src: '/src/assets/images/gallery/treadmill.webp',
-		alt: 'Treadmill repair',
-		category: 'fitness'
-	},
-	{
-		id: 5,
-		src: '/src/assets/images/gallery/bike.webp',
-		alt: 'Exercise bike repair',
-		category: 'fitness'
-	},
-	{
-		id: 6,
-		src: '/src/assets/images/gallery/elliptical.webp',
-		alt: 'Elliptical repair',
-		category: 'fitness'
-	}
+	{ id: 1, src: fridgeImg, alt: 'Refrigerator repair', category: 'appliance' },
+	{ id: 2, src: dishwasherImg, alt: 'Dishwasher repair', category: 'appliance' },
+	{ id: 3, src: dryerImg, alt: 'Dryer repair', category: 'appliance' },
+	{ id: 4, src: treadmillImg, alt: 'Treadmill repair', category: 'fitness' },
+	{ id: 5, src: bikeImg, alt: 'Exercise bike repair', category: 'fitness' },
+	{ id: 6, src: ellipticalImg, alt: 'Elliptical repair', category: 'fitness' }
 ];
+
 
 const Gallery = () => {
 	const [filter, setFilter] = useState<'all' | 'appliance' | 'fitness'>('all');
