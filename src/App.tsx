@@ -30,11 +30,11 @@ const LocalBusinessSchema = () => {
 			"latitude": "45.6387",
 			"longitude": "-122.6615"
 		},
-		"url": "https://yourwebsite.com",
+		"url": "https://appliancefitnessrepair.com",
 		"telephone": "+1-360-404-0169",
 		"priceRange": "$89-$119",
 		"openingHours": "Mo-Fr 08:00-18:00",
-		"image": "https://yourwebsite.com/assets/images/logo.png",
+		"image": "https://appliancefitnessrepair.com/logo.png",
 		"sameAs": [
 			"https://www.facebook.com/yourpage",
 			"https://g.page/r/CacEO8r3g4sNEAE/review",

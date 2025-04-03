@@ -23,11 +23,11 @@ const Header = ({ isScrolled, isNavOpen, toggleNav }: HeaderProps) => {
 				<div className={styles.contactInfo}>
 					<a href="mailto:kaspianstarus@gmail.com" className={styles.contactItem}>
 						<FiMail className={styles.icon}/>
-						<span className={styles.contactText}>info@repairpro.com</span>
+						<span className={styles.contactText}>kaspianstarus@gmail.com</span>
 					</a>
-					<a href="tel:+1234567890" className={styles.contactItem}>
+					<a href="tel:+13604040169" className={styles.contactItem}>
 						<FiPhone className={styles.icon}/>
-						<span className={styles.contactText}>(123) 456-7890</span>
+						<span className={styles.contactText}>(360) 404-0169</span>
 					</a>
 
 				</div>

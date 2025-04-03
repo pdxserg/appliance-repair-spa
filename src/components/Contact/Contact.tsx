@@ -21,7 +21,7 @@ const Contact = () => {
 							<FiPhone className={styles.infoIcon} />
 							<div>
 								<h3>Phone</h3>
-								<p><a href="tel:+1234567890">(123) 456-7890</a></p>
+								<p><a href="tel:+13604040169">(360) 404-0169</a></p>
 							</div>
 						</div>
 
@@ -29,7 +29,7 @@ const Contact = () => {
 							<FiMail className={styles.infoIcon} />
 							<div>
 								<h3>Email</h3>
-								<p><a href="mailto:mailto:kaspianstarus@gmail.com">info@repairpro.com</a></p>
+								<p><a href="mailto:mailto:kaspianstarus@gmail.com">kaspianstarus@gmail.com</a></p>
 							</div>
 						</div>
 
