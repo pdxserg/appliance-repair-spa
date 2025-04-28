@@ -66,11 +66,11 @@ const Footer = () => {
 						</div>
 						<div className={styles.contactItem}>
 							<FiPhone />
-							<a href="tel:+1234567890">(123) 456-7890</a>
+							<a href="tel:+1234567890">(360) 404-0169</a>
 						</div>
 						<div className={styles.contactItem}>
 							<FiMail />
-							<a href="mailto:info@repairpro.com">info@repairpro.com</a>
+							<a href="mailto:info@repairpro.com">kaspianstarus@gmail.com</a>
 						</div>
 					</div>
 				</div>
