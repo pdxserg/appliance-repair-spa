@@ -13,7 +13,8 @@ const Footer = () => {
 				<div className={styles.footerContent}>
 					<div className={styles.footerLogo}>
 						<h2>Kaspian Star LLC</h2>
-						<p>Professional appliance and fitness equipment repair services in Clark County, WA.</p>
+						<p>Looking for reliable appliance or fitness equipment repair near you? We proudly serve Vancouver WA, Battle Ground,
+							Camas, Washougal, Ridgefield, and Portland OR. Book your service today!</p>
 						<div className={styles.social}>
 							<a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
 								<FiFacebook />

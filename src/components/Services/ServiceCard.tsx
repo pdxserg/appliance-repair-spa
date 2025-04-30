@@ -41,12 +41,22 @@ const ServiceCard = ({service}: ServiceCardProps) => {
 	};
 
 	return (
-		<div className={styles.serviceCard}>
+		<div className={styles.serviceCard} itemScope itemType="https://schema.org/Service">
 			<div className={styles.cardIcon}>
 				{getIcon(service.icon)}
 			</div>
-			<h3>{service.name}</h3>
-			<p>{service.description}</p>
+			<div>
+				<h3 itemProp="name">{service.name}</h3>
+				<p itemProp="description">{service.description}</p>
+				<meta itemProp="serviceType" content={`${service.name} Service`}/>
+				<meta itemProp="areaServed" content="Vancouver WA"/>
+				<meta itemProp="areaServed" content="Portland OR"/>
+				<meta itemProp="provider" content="Kaspian Star Appliance & Fitness Repair"/>
+				<meta itemProp="priceRange" content="$$"/>
+			</div>
+
+			{/*<h3>{service.name}</h3>*/}
+			{/*<p>{service.description}</p>*/}
 		</div>
 	);
 };
