@@ -18,7 +18,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/src/assets/images/gallery/bgc-logo.webp');
+    /*background-image: url('/src/assets/images/gallery/bgc-logo.webp');*/
     background-color: rgba(0, 0, 0, 0.7);
     background-position: bottom;
     background-repeat: no-repeat;
@@ -27,6 +27,8 @@
     justify-content: center;
     align-items: center;
 }
+
+
 
 .heroContent {
     color: white;
@@ -40,6 +42,7 @@
 .heroContent h1 {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
+    color: #9ffffc;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 

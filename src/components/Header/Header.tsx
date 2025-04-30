@@ -1,7 +1,8 @@
-// src/components/Header/Header.tsx
+
 
 import { FiMenu, FiX, FiPhone, FiMail } from 'react-icons/fi';
 import styles from './Header.module.css';
+
 
 interface HeaderProps {
 	isScrolled: boolean;

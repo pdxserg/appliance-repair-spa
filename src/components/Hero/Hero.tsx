@@ -6,6 +6,7 @@ const Hero = () => {
 	return (
 		<section id="home" className={styles.hero}>
 			<div className={styles.overlay}>
+
 				<div className="container">
 					<div className={styles.heroContent}>
 						<h1>Appliance & Fitness Equipment Repair in Vancouver, WA and Portland, OR</h1>
