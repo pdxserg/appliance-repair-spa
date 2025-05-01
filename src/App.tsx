@@ -11,6 +11,7 @@ import Gallery from "./components/Gallery/Gallery.tsx";
 import Rates from "./components/Rates/Rates.tsx";
 import BrandsSection from "./components/BrandsSection/BrandsSection.tsx";
 import { HelmetProvider, Helmet } from "react-helmet-async";
+ import BookingForm from "./components/BookingForm/BookingForm.tsx";
 
 const LocalBusinessSchema = () => {
 	const schemaData = {
@@ -81,6 +82,7 @@ function App() {
 			<main>
 				<Hero />
 				<Services />
+				<BookingForm />
 				<Gallery />
 				<About />
 				<Rates />
