@@ -24,7 +24,7 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 							className={styles.navLink}
 							activeClass={styles.active}
 						>
-							<FiHome className={styles.navIcon} />
+							<FiHome className={styles.navIcon}/>
 							<span>Home</span>
 						</Link>
 					</li>
@@ -39,8 +39,23 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 							className={styles.navLink}
 							activeClass={styles.active}
 						>
-							<FiSettings className={styles.navIcon} />
+							<FiSettings className={styles.navIcon}/>
 							<span>Services</span>
+						</Link>
+					</li>
+					<li className={styles.navItem}>
+						<Link
+							to="bookingForm"
+							spy={true}
+							smooth={true}
+							offset={-70}
+							duration={500}
+							onClick={closeNav}
+							className={styles.navLink}
+							activeClass={styles.active}
+						>
+							<FiDollarSign className={styles.navIcon}/>
+							<span>Book Now</span>
 						</Link>
 					</li>
 					<li className={styles.navItem}>
@@ -54,7 +69,7 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 							className={styles.navLink}
 							activeClass={styles.active}
 						>
-							<FiImage className={styles.navIcon} />
+							<FiImage className={styles.navIcon}/>
 							<span>Gallery</span>
 						</Link>
 					</li>
@@ -69,7 +84,7 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 							className={styles.navLink}
 							activeClass={styles.active}
 						>
-							<FiInfo className={styles.navIcon} />
+							<FiInfo className={styles.navIcon}/>
 							<span>About</span>
 						</Link>
 					</li>
@@ -84,10 +99,11 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 							className={styles.navLink}
 							activeClass={styles.active}
 						>
-							<FiDollarSign className={styles.navIcon} />
+							<FiDollarSign className={styles.navIcon}/>
 							<span>Rates</span>
 						</Link>
-					</li><li className={styles.navItem}>
+					</li>
+					<li className={styles.navItem}>
 						<Link
 							to="contact"
 							spy={true}
@@ -98,7 +114,7 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 							className={styles.navLink}
 							activeClass={styles.active}
 						>
-							<FiPhone className={styles.navIcon} />
+							<FiPhone className={styles.navIcon}/>
 							<span>Contact</span>
 						</Link>
 					</li>

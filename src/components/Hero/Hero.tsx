@@ -23,14 +23,14 @@ const Hero = () => {
 								Our Services
 							</Link>
 							<Link
-								to="contact"
+								to="bookingForm"
 								spy={true}
 								smooth={true}
 								offset={-70}
 								duration={500}
 								className="btn btn-secondary"
 							>
-								Contact Us
+								Book Now
 							</Link>
 							<Link
 								to="rates"

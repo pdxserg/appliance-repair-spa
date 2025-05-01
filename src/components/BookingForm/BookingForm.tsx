@@ -5,7 +5,7 @@ import styles from './BookingForm.module.css';
 const BookingForm = () => {
 	return (
 		<section
-			id="bookNow"
+			id="bookingForm"
 			className={`section ${styles.aboutSection}`}>
 			<div className="container">
 				<h2 className="section-title">Book now</h2>
