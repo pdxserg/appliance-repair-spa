@@ -1,13 +1,17 @@
 import styles from './BookingForm.module.css';
 import {useForm} from 'react-hook-form'
+import {useState} from "react";
 
 const BookingForm = () => {
 	const {
 		register,
 		handleSubmit,
 		setValue,
+
 		formState: {errors}
 	} = useForm()
+	const [isSubmitted, setIsSubmitted] = useState(false);
+
 
 	return (
 		<section
@@ -20,7 +24,9 @@ const BookingForm = () => {
 					<div>
 						<form onSubmit={handleSubmit((data) => {
 							console.log(data)
+							setIsSubmitted(true)
 						})}>
+
 							<input placeholder="First name*"
 							       {...register('firstName',
 								       {
@@ -61,7 +67,7 @@ const BookingForm = () => {
 								       setValue('lastName', cleaned, {shouldValidate: true});
 							       }}
 							/>
-							<p>{errors.firstName?.message?.toString()}</p>
+							<p>{errors.lastName?.message?.toString()}</p>
 
 							<input type="tel"
 							       placeholder="Phone number*"
@@ -168,21 +174,35 @@ const BookingForm = () => {
 							       )} />
 							<p>{errors.zip?.message?.toString()}</p>
 
-							<textarea placeholder="Description"
+							<textarea placeholder="Issue + appliance type (e.g. dryer not heating)"
 							          {...register('description',
 								          {maxLength: 500}
 							          )} />
 							<br/>
 							<label>
-								<input
-									type="checkbox"
-									{...register('terms', {required: 'You must accept the terms'})}
+								<input style={{width: 30, height: 30}}
+								       type="checkbox"
+								       {...register('terms', {required: 'You must accept the terms'})}
 								/>
-								I accept the terms and conditions
+								I agree to receive texts. Msg & data rates may apply.
 							</label>
 							<p>{errors.terms?.message?.toString()}</p>
 
-							<input type="submit"/>
+							<input
+								type="submit"
+								className={`${styles.submitButton} ${
+									isSubmitted
+										? styles.green
+										: Object.keys(errors).length > 0
+											? styles.grey
+											: styles.blue
+								}`}
+								value={
+									isSubmitted
+										? 'Your data sent successfully'
+										: 'Submit'
+								}
+							/>
 						</form>
 
 					</div>

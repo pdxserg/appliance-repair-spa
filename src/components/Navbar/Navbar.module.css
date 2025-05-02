@@ -61,7 +61,7 @@
 @media (min-width: 769px) {
     .navbar {
         position: sticky;
-        top: 68px; /* Height of header */
+        top: 90px; /* Height of header */
         transform: translateY(0);
         z-index: 900;
     }

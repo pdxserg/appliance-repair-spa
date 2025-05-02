@@ -10,10 +10,11 @@
 }
 
 .tabButton {
+
     padding: 0.75rem 1.5rem;
     background-color: white;
     border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
@@ -25,6 +26,7 @@
 
 .tabButton:last-child {
     border-radius: 0 4px 4px 0;
+
 }
 
 .tabButton.active {

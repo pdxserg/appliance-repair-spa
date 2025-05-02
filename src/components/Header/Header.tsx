@@ -1,7 +1,8 @@
 
 
-import { FiMenu, FiX, FiPhone, FiMail } from 'react-icons/fi';
+import { FiMenu, FiX, FiPhone } from 'react-icons/fi';
 import styles from './Header.module.css';
+import ScrollLinkWrapper from "../LinkScroll.tsx";
 
 
 interface HeaderProps {
@@ -22,10 +23,21 @@ const Header = ({ isScrolled, isNavOpen, toggleNav }: HeaderProps) => {
 				</div>
 
 				<div className={styles.contactInfo}>
-					<a href="mailto:kaspianstarus@gmail.com" className={styles.contactItem}>
-						<FiMail className={styles.icon}/>
-						<span className={styles.contactText}>kaspianstarus@gmail.com</span>
-					</a>
+					<ScrollLinkWrapper
+						to="bookingForm"
+						spy={true}
+						smooth={true}
+						offset={-70}
+						duration={500}
+						// className="btn btn-secondary"
+						className={`btn btn-secondary ${styles.shiny}`}
+					>
+						Book Now
+					</ScrollLinkWrapper>
+					{/*<a href="mailto:kaspianstarus@gmail.com" className={styles.contactItem}>*/}
+					{/*	<FiMail className={styles.icon}/>*/}
+					{/*	<span className={styles.contactText}>kaspianstarus@gmail.com</span>*/}
+					{/*</a>*/}
 					<a href="tel:+13604040169" className={styles.contactItem}>
 						<FiPhone className={styles.icon}/>
 						<span className={styles.contactText}>(360) 404-0169</span>

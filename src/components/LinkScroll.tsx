@@ -8,7 +8,7 @@ const ScrollLinkWrapper = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) 
 	// Cast the component to any to bypass TypeScript's strict checking
 	const ScrollLinkComponent = ScrollLink as any;
 
-	return <ScrollLinkComponent {...props} innerRef={ref} />;
+	return <ScrollLinkComponent {...props} innerref={ref} />;
 });
 
 ScrollLinkWrapper.displayName = 'ScrollLinkWrapper';
