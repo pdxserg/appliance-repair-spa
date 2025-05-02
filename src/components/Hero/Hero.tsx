@@ -1,7 +1,6 @@
 
-import { Link } from 'react-scroll';
-
 import styles from './Hero.module.css';
+import ScrollLinkWrapper from "../LinkScroll.tsx";
 
 const Hero = () => {
 	return (
@@ -13,7 +12,7 @@ const Hero = () => {
 						<h1>Appliance & Fitness Equipment Repair in Vancouver, WA and Portland, OR</h1>
 						<p>Fast, reliable repair services for all major brands in Clark County, WA</p>
 						<div className={styles.heroCta}>
-							<Link
+							<ScrollLinkWrapper
 								to="services"
 								spy={true}
 								smooth={true}
@@ -22,8 +21,8 @@ const Hero = () => {
 								className="btn btn-primary"
 							>
 								Our Services
-							</Link>
-							<Link
+							</ScrollLinkWrapper>
+							<ScrollLinkWrapper
 								to="bookingForm"
 								spy={true}
 								smooth={true}
@@ -32,8 +31,8 @@ const Hero = () => {
 								className="btn btn-secondary"
 							>
 								Book Now
-							</Link>
-							<Link
+							</ScrollLinkWrapper>
+							<ScrollLinkWrapper
 								to="rates"
 								spy={true}
 								smooth={true}
@@ -42,7 +41,7 @@ const Hero = () => {
 								className="btn btn-secondary"
 							>
 								Rates
-							</Link>
+							</ScrollLinkWrapper>
 						</div>
 					</div>
 				</div>

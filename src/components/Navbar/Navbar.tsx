@@ -1,7 +1,8 @@
-// src/components/Navbar/Navbar.tsx
-import { Link } from 'react-scroll';
+
+
 import {FiHome, FiSettings, FiImage, FiInfo, FiPhone, FiDollarSign, FiMail} from 'react-icons/fi';
 import styles from './Navbar.module.css';
+import ScrollLinkWrapper from "../LinkScroll.tsx";
 
 interface NavbarProps {
 	isOpen: boolean;
@@ -9,12 +10,13 @@ interface NavbarProps {
 }
 
 const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
+
 	return (
 		<nav className={`${styles.navbar} ${isOpen ? styles.open : ''}`}>
 			<div className={styles.navContainer}>
 				<ul className={styles.navList}>
 					<li className={styles.navItem}>
-						<Link
+						<ScrollLinkWrapper
 							to="home"
 							spy={true}
 							smooth={true}
@@ -23,13 +25,14 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 							onClick={closeNav}
 							className={styles.navLink}
 							activeClass={styles.active}
+
 						>
 							<FiHome className={styles.navIcon}/>
 							<span>Home</span>
-						</Link>
+						</ScrollLinkWrapper>
 					</li>
 					<li className={styles.navItem}>
-						<Link
+						<ScrollLinkWrapper
 							to="services"
 							spy={true}
 							smooth={true}
@@ -41,10 +44,10 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 						>
 							<FiSettings className={styles.navIcon}/>
 							<span>Services</span>
-						</Link>
+						</ScrollLinkWrapper>
 					</li>
 					<li className={styles.navItem}>
-						<Link
+						<ScrollLinkWrapper
 							to="bookingForm"
 							spy={true}
 							smooth={true}
@@ -56,10 +59,10 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 						>
 							<FiMail className={styles.navIcon}/>
 							<span>Book Now</span>
-						</Link>
+						</ScrollLinkWrapper>
 					</li>
 					<li className={styles.navItem}>
-						<Link
+						<ScrollLinkWrapper
 							to="gallery"
 							spy={true}
 							smooth={true}
@@ -71,10 +74,10 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 						>
 							<FiImage className={styles.navIcon}/>
 							<span>Gallery</span>
-						</Link>
+						</ScrollLinkWrapper>
 					</li>
 					<li className={styles.navItem}>
-						<Link
+						<ScrollLinkWrapper
 							to="about"
 							spy={true}
 							smooth={true}
@@ -86,10 +89,10 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 						>
 							<FiInfo className={styles.navIcon}/>
 							<span>About</span>
-						</Link>
+						</ScrollLinkWrapper>
 					</li>
 					<li className={styles.navItem}>
-						<Link
+						<ScrollLinkWrapper
 							to="rates"
 							spy={true}
 							smooth={true}
@@ -101,10 +104,10 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 						>
 							<FiDollarSign className={styles.navIcon}/>
 							<span>Rates</span>
-						</Link>
+						</ScrollLinkWrapper>
 					</li>
 					<li className={styles.navItem}>
-						<Link
+						<ScrollLinkWrapper
 							to="contact"
 							spy={true}
 							smooth={true}
@@ -116,7 +119,7 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 						>
 							<FiPhone className={styles.navIcon}/>
 							<span>Contact</span>
-						</Link>
+						</ScrollLinkWrapper>
 					</li>
 				</ul>
 			</div>
