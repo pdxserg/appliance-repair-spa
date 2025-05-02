@@ -1,6 +1,6 @@
 // src/components/Navbar/Navbar.tsx
 import { Link } from 'react-scroll';
-import {FiHome, FiSettings, FiImage, FiInfo, FiPhone, FiDollarSign} from 'react-icons/fi';
+import {FiHome, FiSettings, FiImage, FiInfo, FiPhone, FiDollarSign, FiMail} from 'react-icons/fi';
 import styles from './Navbar.module.css';
 
 interface NavbarProps {
@@ -54,7 +54,7 @@ const Navbar = ({ isOpen, closeNav }: NavbarProps) => {
 							className={styles.navLink}
 							activeClass={styles.active}
 						>
-							<FiDollarSign className={styles.navIcon}/>
+							<FiMail className={styles.navIcon}/>
 							<span>Book Now</span>
 						</Link>
 					</li>
