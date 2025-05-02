@@ -1,9 +1,14 @@
-
 import styles from './BookingForm.module.css';
 import {useForm} from 'react-hook-form'
 
 const BookingForm = () => {
-	const {register, handleSubmit}= useForm()
+	const {
+		register,
+		handleSubmit,
+		setValue,
+		formState: {errors}
+	} = useForm()
+
 	return (
 		<section
 			id="bookingForm"
@@ -13,14 +18,169 @@ const BookingForm = () => {
 
 				<div className={styles.aboutContent}>
 					<div>
-						<form onSubmit={handleSubmit((data)=>{
+						<form onSubmit={handleSubmit((data) => {
 							console.log(data)
 						})}>
-							<input {...register('First name')} placeholder="First name"/>
-							<input {...register('Last name')} placeholder="Last name"/>
-							<input {...register('Phone number')} placeholder="Phone number"/>
-							<input {...register('E-mail address')} placeholder="E-mail address"/>
-							<input {...register('ZIP')} placeholder="ZIP"/>
+							<input placeholder="First name*"
+							       {...register('firstName',
+								       {
+									       required: "First name is required",
+									       maxLength: {
+										       value: 15,
+										       message: "Your name to long"
+									       },
+									       minLength: {
+										       value: 2,
+										       message: "Your name to short"
+									       }
+								       }
+							       )}
+							       onChange={(e) => {
+								       const cleaned = e.target.value.trim();
+								       setValue('firstName', cleaned, {shouldValidate: true});
+							       }}
+							/>
+							<p>{errors.firstName?.message?.toString()}</p>
+
+							<input placeholder="Last name*"
+							       {...register('lastName',
+								       {
+									       required: "Last name is required",
+									       maxLength: {
+										       value: 15,
+										       message: "Your Last name to long"
+									       },
+									       minLength: {
+										       value: 2,
+										       message: "Your Last name to short"
+									       }
+								       }
+							       )}
+							       onChange={(e) => {
+								       const cleaned = e.target.value.trim();
+								       setValue('lastName', cleaned, {shouldValidate: true});
+							       }}
+							/>
+							<p>{errors.firstName?.message?.toString()}</p>
+
+							<input type="tel"
+							       placeholder="Phone number*"
+							       {...register('phoneNumber',
+								       {
+									       required: 'Phone number is required',
+									       minLength: {
+										       value: 10,
+										       message: 'Phone number must be 10 digits',
+									       },
+									       maxLength: {
+										       value: 10,
+										       message: 'Phone number must be 10 digits',
+									       },
+									       pattern: {
+										       value: /^\d+$/,
+										       message: 'Only digits allowed',
+									       },
+								       }
+							       )}/>
+							<p>{errors.phoneNumber?.message?.toString()}</p>
+
+							<input placeholder="E-mail address*"
+							       {...register('emailAddress',
+								       {
+									       required: 'Email is required',
+									       maxLength: {
+										       value: 40,
+										       message: 'Email incorrect',
+									       },
+									       pattern: {
+										       value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+										       message: 'Invalid email format',
+									       }
+								       }
+							       )} />
+							<p>{errors.emailAddress?.message?.toString()}</p>
+
+
+							<input placeholder="Street Address*"
+							       {...register('streetAddress',
+								       {
+									       required: 'Address is required',
+									       minLength: {
+										       value: 2,
+										       message: 'Address incorrect',
+									       },
+									       maxLength: {
+										       value: 30,
+										       message: 'Address incorrect',
+									       },
+								       }
+							       )} />
+							<p>{errors.streetAddress?.message?.toString()}</p>
+
+							<input placeholder="Unit/Apartment/Suit"
+							       {...register('unit',
+								       {
+									       minLength: {
+										       value: 1,
+										       message: 'Address incorrect',
+									       },
+									       maxLength: {
+										       value: 30,
+										       message: 'Address incorrect',
+									       },
+								       }
+							       )} />
+							<p>{errors.unit?.message?.toString()}</p>
+
+							<input placeholder="City*"
+							       {...register('city',
+								       {
+									       required: 'Address is required',
+									       minLength: {
+										       value: 2,
+										       message: 'Address incorrect',
+									       },
+									       maxLength: {
+										       value: 15,
+										       message: 'Address incorrect',
+									       },
+								       }
+							       )} />
+							<p>{errors.city?.message?.toString()}</p>
+
+							<input placeholder="ZIP*"
+							       {...register('zip',
+								       {
+									       required: 'Zip code is required',
+									       minLength: {
+										       value: 5,
+										       message: 'Zip code is incorrect',
+									       },
+									       maxLength: {
+										       value: 5,
+										       message: 'Zip code is incorrect',
+									       },
+									       pattern: {
+										       value: /^(98|97)\d{3}$/,
+										       message: 'Only digits allowed',
+									       },
+								       }
+							       )} />
+							<p>{errors.zip?.message?.toString()}</p>
+
+							<textarea placeholder="Description"
+							          {...register('description',
+								          {maxLength: 500}
+							          )} />
+							<br/>
+							<label>
+								<input
+									type="checkbox"
+									{...register('terms', {required: 'You must accept the terms'})}
+								/>
+								I accept the terms and conditions
+							</label>
+							<p>{errors.terms?.message?.toString()}</p>
 
 							<input type="submit"/>
 						</form>
@@ -28,16 +188,6 @@ const BookingForm = () => {
 					</div>
 
 
-
-					<div className={styles.aboutText}>
-						<p>
-							With over 10 years of experience in appliance and fitness equipment repair,
-							we pride ourselves on delivering fast, reliable, and affordable service to
-							residents throughout Clark County, Washington.
-						</p>
-
-
-					</div>
 				</div>
 			</div>
 		</section>
