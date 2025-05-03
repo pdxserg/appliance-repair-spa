@@ -205,10 +205,12 @@ return (
 						       )} />
 						<p className={styles.errorMessage}>{errors.zip?.message?.toString()}</p>
 
-						<textarea placeholder="Issue + appliance type (e.g. dryer not heating)"
-						          {...register('description',
-							          {maxLength: 500}
-						          )} />
+						<label htmlFor="description">Description:</label>
+						<textarea
+							id="description"
+							placeholder="Issue and home equipment (e.g. dryer not heating)"
+							{...register('description', {maxLength: 500})}
+						/>
 						<br/>
 						<label>
 							<input style={{width: 30, height: 30}}
@@ -240,7 +242,7 @@ return (
 		</div>
 	</section>
 );
-}
+	}
 ;
 
 export default BookingForm;
