@@ -18,32 +18,31 @@ const BookingForm = () => {
 
 	// const watchAllField= watch(["firstName"])
 	// console.log('itWatch',watchAllField)
-	// const onSubmit = (data: any) => {
-	// 	emailjs
-	// 		.send('service_ppiajec', 'template_zmp60bv', data, 'Dk4RWVU7n3icpiBJq')
-	// 		.then(() => {
-	// 			alert('Email sent successfully!');
-	// 			console.log(data)
-	// 			setIsSubmitted(true)
-	// 			reset(); // clear the form
-	// 		})
-	// 		.catch((error) => {
-	// 			alert('Failed to send email. Error: ' + error.text);
-	// 		})
-	// 		.finally(()=>{
-	// 			setTimeout(()=>{
-	// 				setIsSubmitted(false)
-	// 			},5000)
-	// 		});
-	// }
-		const onSubmit = (data: any) => {
-				console.log(data)
+
+	const onSubmit = (data: any) => {
+		emailjs
+			.send('service_ppiajec', 'template_zmp60bv', data, 'Dk4RWVU7n3icpiBJq')
+			.then(() => {
 				setIsSubmitted(true)
 				reset(); // clear the form
+			})
+			.catch((error) => {
+				alert('Failed to send email. Error: ' + error.text);
+			})
+			.finally(()=>{
 				setTimeout(()=>{
 					setIsSubmitted(false)
 				},5000)
-			}
+			});
+	}
+	// 	const onSubmit = (data: any) => {
+	// 			console.log(data)
+	// 			setIsSubmitted(true)
+	// 			reset(); // clear the form
+	// 			setTimeout(()=>{
+	// 				setIsSubmitted(false)
+	// 			},5000)
+	// 		}
 
 
 

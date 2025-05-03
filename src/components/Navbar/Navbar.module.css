@@ -91,11 +91,16 @@
 }
 
 @media (max-width: 480px) {
+    .navContainer {
+        max-width: var(--container-width);
+        /*margin: 0 auto;*/
+       padding: 0
+    }
     .navLink span {
         font-size: 0.8rem;
     }
 
     .navIcon {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
