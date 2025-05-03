@@ -1,6 +1,8 @@
 import styles from './BookingForm.module.css';
 import {useForm} from 'react-hook-form'
 import {useState} from "react";
+import emailjs from '@emailjs/browser';
+
 
 const BookingForm = () => {
 	const {
@@ -17,9 +19,17 @@ const BookingForm = () => {
 	// const watchAllField= watch(["firstName"])
 	// console.log('itWatch',watchAllField)
 	const onSubmit = (data: any) => {
-		console.log(data)
-		setIsSubmitted(true)
-		reset()
+		emailjs
+			.send('service_ppiajec', 'template_zmp60bv', data, 'Dk4RWVU7n3icpiBJq')
+			.then(() => {
+				alert('Email sent successfully!');
+				console.log(data)
+				setIsSubmitted(true)
+				reset(); // clear the form
+			})
+			.catch((error) => {
+				alert('Failed to send email. Error: ' + error.text);
+			});
 	}
 
 return (
