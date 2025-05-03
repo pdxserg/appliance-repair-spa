@@ -70,26 +70,30 @@ function App() {
 	return (
 		<HelmetProvider>
 			<Helmet>
-				<title>Kaspian Star Appliance and Fitness Equipment Repair</title>
+				<title>Treadmill Repair Near Me | Appliance & Fitness Equipment Services | Kaspian Star</title>
 				<meta
 					name="description"
-					content="Expert appliance and fitness equipment repair services in Clark County, WA"
+					content="Fast and reliable treadmill, appliance, and fitness equipment repair in Portland, Beaverton, and Vancouver. Same-day service available."
+				/>
+				<meta
+					name="keywords"
+					content="treadmill repair, appliance repair, fitness equipment repair, Portland, Beaverton, Vancouver, gym equipment repair, same-day service"
 				/>
 			</Helmet>
-			<LocalBusinessSchema />
-			<Header isScrolled={isScrolled} toggleNav={toggleNav} isNavOpen={isNavOpen} />
-			<Navbar isOpen={isNavOpen} closeNav={closeNav} />
+			<LocalBusinessSchema/>
+			<Header isScrolled={isScrolled} toggleNav={toggleNav} isNavOpen={isNavOpen}/>
+			<Navbar isOpen={isNavOpen} closeNav={closeNav}/>
 			<main>
-				<Hero />
-				<Services />
-				<BookingForm />
-				<Gallery />
-				<About />
-				<Rates />
-				<Contact />
+				<Hero/>
+				<Services/>
+				<BookingForm/>
+				<Gallery/>
+				<About/>
+				<Rates/>
+				<Contact/>
 			</main>
-			<Footer />
-			<BrandsSection />
+			<Footer/>
+			<BrandsSection/>
 		</HelmetProvider>
 	);
 }
