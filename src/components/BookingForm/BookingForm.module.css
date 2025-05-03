@@ -3,7 +3,7 @@
 .aboutSection {
     background-color: var(--gray-100);
 }
-p{
+.errorMessage{
     color: red;
     margin-bottom: 5px;
 }

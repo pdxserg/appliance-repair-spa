@@ -78,7 +78,7 @@ return (
 							       setValue('firstName', cleaned, {shouldValidate: true});
 						       }}
 						/>
-						<p>{errors.firstName?.message?.toString()}</p>
+						<p className={styles.errorMessage}>{errors.firstName?.message?.toString()}</p>
 
 						<input placeholder="Last name*"
 						       {...register('lastName',
@@ -99,7 +99,7 @@ return (
 							       setValue('lastName', cleaned, {shouldValidate: true});
 						       }}
 						/>
-						<p>{errors.lastName?.message?.toString()}</p>
+						<p className={styles.errorMessage}>{errors.lastName?.message?.toString()}</p>
 
 						<input type="tel"
 						       placeholder="Phone number*"
@@ -120,7 +120,7 @@ return (
 								       },
 							       }
 						       )}/>
-						<p>{errors.phoneNumber?.message?.toString()}</p>
+						<p className={styles.errorMessage}>{errors.phoneNumber?.message?.toString()}</p>
 
 						<input placeholder="E-mail address*"
 						       {...register('emailAddress',
@@ -136,7 +136,7 @@ return (
 								       }
 							       }
 						       )} />
-						<p>{errors.emailAddress?.message?.toString()}</p>
+						<p className={styles.errorMessage}>{errors.emailAddress?.message?.toString()}</p>
 
 
 						<input placeholder="Street Address*"
@@ -153,7 +153,7 @@ return (
 								       },
 							       }
 						       )} />
-						<p>{errors.streetAddress?.message?.toString()}</p>
+						<p className={styles.errorMessage}>{errors.streetAddress?.message?.toString()}</p>
 
 						<input placeholder="Unit/Apartment/Suit"
 						       {...register('unit',
@@ -168,23 +168,23 @@ return (
 								       },
 							       }
 						       )} />
-						<p>{errors.unit?.message?.toString()}</p>
+						<p className={styles.errorMessage}>{errors.unit?.message?.toString()}</p>
 
 						<input placeholder="City*"
 						       {...register('city',
 							       {
-								       required: 'Address is required',
+								       required: 'City is required',
 								       minLength: {
 									       value: 2,
-									       message: 'Address incorrect',
+									       message: 'City is incorrect',
 								       },
 								       maxLength: {
 									       value: 15,
-									       message: 'Address incorrect',
+									       message: 'City is incorrect',
 								       },
 							       }
 						       )} />
-						<p>{errors.city?.message?.toString()}</p>
+						<p className={styles.errorMessage}>{errors.city?.message?.toString()}</p>
 
 						<input placeholder="ZIP*"
 						       {...register('zip',
@@ -204,7 +204,7 @@ return (
 								       },
 							       }
 						       )} />
-						<p>{errors.zip?.message?.toString()}</p>
+						<p className={styles.errorMessage}>{errors.zip?.message?.toString()}</p>
 
 						<textarea placeholder="Issue + appliance type (e.g. dryer not heating)"
 						          {...register('description',
@@ -218,7 +218,7 @@ return (
 							/>
 							I agree to receive texts. Msg & data rates may apply.
 						</label>
-						<p>{errors.terms?.message?.toString()}</p>
+						<p className={styles.errorMessage}>{errors.terms?.message?.toString()}</p>
 
 						<input
 							type="submit"
