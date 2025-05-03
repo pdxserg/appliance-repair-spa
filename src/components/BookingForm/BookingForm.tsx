@@ -1,17 +1,20 @@
 import styles from './BookingForm.module.css';
 import {useForm} from 'react-hook-form'
-import {useState} from "react";
+import { useState} from "react";
 
 const BookingForm = () => {
 	const {
 		register,
 		handleSubmit,
 		setValue,
-
+// watch,
 		formState: {errors}
 	} = useForm()
 	const [isSubmitted, setIsSubmitted] = useState(false);
 
+
+	// const watchAllField= watch(["firstName"])
+	// console.log('itWatch',watchAllField)
 
 	return (
 		<section
@@ -197,12 +200,9 @@ const BookingForm = () => {
 											? styles.grey
 											: styles.blue
 								}`}
-								value={
-									isSubmitted
-										? 'Your data sent successfully'
-										: 'Submit'
-								}
+								value={isSubmitted ? 'Your data sent successfully' : 'Submit'}
 							/>
+
 						</form>
 
 					</div>

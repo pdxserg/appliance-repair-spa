@@ -52,7 +52,7 @@ textarea::placeholder {
 .submitButton {
     padding: 10px 20px;
     font-size: 16px;
-
+color: var(--light-color);
     border-radius: 5px;
     transition: background 0.3s ease;
     cursor: pointer;
@@ -63,11 +63,12 @@ textarea::placeholder {
 }
 
 .blue {
-    background-color: #007bff;
+    background-color: var(--primary-color);
 }
 
 .green {
-    background-color: #4eff78;
+    background-color:green;
+
 }
 
 @media (max-width: 768px) {
