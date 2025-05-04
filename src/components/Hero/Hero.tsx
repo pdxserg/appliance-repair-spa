@@ -9,7 +9,7 @@ const Hero = () => {
 
 				<div className="container">
 					<div className={styles.heroContent}>
-						<h1>Appliance & Fitness Equipment Repair in Vancouver, WA and Portland, OR</h1>
+						<h1>Treadmill, Appliance & Fitness Equipment Repair in Vancouver, WA and Portland, OR</h1>
 						<p>Fast, reliable repair services for all major brands in Clark County, WA</p>
 						<div className={styles.heroCta}>
 							<ScrollLinkWrapper

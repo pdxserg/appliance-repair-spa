@@ -26,6 +26,21 @@ const LocalBusinessSchema = () => {
 			"postalCode": "98684",
 			"addressCountry": "US"
 		},
+		"areaServed": [
+			// Clark County, WA
+			"Vancouver WA", "Camas WA", "Battle Ground WA", "Ridgefield WA", "Washougal WA", "La Center WA", "Yacolt WA",
+			"Hazel Dell WA", "Salmon Creek WA", "Orchards WA", "Brush Prairie WA", "Minnehaha WA",
+			"Walnut Grove WA", "Five Corners WA", "Felida WA", "Mount Vista WA", "Barberton WA",
+			"Lake Shore WA", "Cherry Grove WA", "Amboy WA", "Dollars Corner WA", "Hockinson WA", "Duluth WA",
+
+			// Portland Area, OR
+			"Portland OR", "Beaverton OR", "Gresham OR", "Hillsboro OR", "Tigard OR", "Lake Oswego OR",
+			"Oregon City OR", "Milwaukie OR", "Tualatin OR", "West Linn OR", "Wilsonville OR", "Troutdale OR",
+			"Sherwood OR", "Happy Valley OR", "Canby OR", "Newberg OR", "Forest Grove OR", "Cornelius OR",
+			"Fairview OR", "Wood Village OR", "King City OR", "Durham OR", "Maywood Park OR",
+			"Aloha OR", "Cedar Mill OR", "Cedar Hills OR", "Oak Grove OR", "Clackamas OR", "Damascus OR",
+			"West Slope OR", "Raleigh Hills OR", "Garden Home OR"
+		],
 		"geo": {
 			"@type": "GeoCoordinates",
 			"latitude": "45.6387",
@@ -73,7 +88,7 @@ function App() {
 				<title>Treadmill Repair Near Me | Appliance & Fitness Equipment Services | Kaspian Star</title>
 				<meta
 					name="description"
-					content="Fast and reliable treadmill, appliance, and fitness equipment repair in Portland, Beaverton, and Vancouver. Same-day service available."
+					content="Same-day repair for appliances, treadmills, and gym equipment in Vancouver WA, Portland OR, Beaverton, Camas, Washougal, Tigard, and Hillsboro."
 				/>
 				<meta
 					name="keywords"

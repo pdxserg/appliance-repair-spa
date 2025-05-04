@@ -1,4 +1,17 @@
 
+.serviceAreas {
+    margin-top: 2rem;
+}
+
+.areasList {
+    columns: 8;
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.4;
+    padding-left: 1rem;
+}
+
+
 .footer {
     background-color: var(--dark-color);
     color: white;
