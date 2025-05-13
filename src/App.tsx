@@ -46,7 +46,10 @@ const LocalBusinessSchema = () => {
 		"review": [
 			{
 				"@type": "Review",
-				"author": "John M.",
+				"author": {
+					"@type": "Person",
+					"name": "John M."
+				},
 				"name": "Great treadmill repair service",
 				"datePublished": "2024-12-10",
 				"reviewBody": "Fixed my treadmill in under an hour. Very professional and friendly.",
@@ -58,7 +61,10 @@ const LocalBusinessSchema = () => {
 			},
 			{
 				"@type": "Review",
-				"author": "Sarah K.",
+				"author": {
+					"@type": "Person",
+					"name": "Sarah K."
+				},
 				"name": "Best appliance repair service",
 				"datePublished": "2025-01-22",
 				"reviewBody": "Quick and affordable dryer repair. Highly recommended.",

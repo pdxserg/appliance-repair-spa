@@ -62,17 +62,30 @@ const Footer = () => {
 					<div className={styles.footerContact}>
 						<h3>Contact Info</h3>
 						<div className={styles.contactItem}>
-							<FiMapPin />
+							<FiMapPin/>
 							<span>Serving Clark County, WA & Portland Metro</span>
 						</div>
 						<div className={styles.contactItem}>
-							<FiPhone />
+							<FiPhone/>
 							<a href="tel:+13604040169">(360) 404-0169</a>
 						</div>
+						{/*<div className={styles.contactItem}>*/}
+						{/*	<FiMail />*/}
+						{/*	<a href="mailto:kaspianstarus@gmail.com">kaspianstarus@gmail.com</a>*/}
+						{/*</div>*/}
 						<div className={styles.contactItem}>
-							<FiMail />
-							<a href="mailto:kaspianstarus@gmail.com">kaspianstarus@gmail.com</a>
+							<FiMail/>
+							<a
+								href="#"
+								onClick={(e) => {
+									e.preventDefault();
+									window.location.href = 'mailto:' + ['kaspianstarus', 'gmail.com'].join('@');
+								}}
+							>
+								eMail Us (click)
+							</a>
 						</div>
+
 					</div>
 				</div>
 
