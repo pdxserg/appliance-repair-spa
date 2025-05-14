@@ -42,16 +42,24 @@ const Services = () => {
 						Fitness Equipment Repair
 					</button>
 				</div>
-
 				<div className={styles.servicesGrid}>
 					{activeTab === 'appliance' ? (
-						applianceServices.map(service => (
-							<ServiceCard key={service.id} service={service}/>
-						))
+						<>
+							<strong>Samsung, LG, Kenmore, Fridgidaire,  Whirlpool, KitchenAid, Maytag, GE, Electrolux, Speed Queen, Bosch, Miele, </strong>
+							{applianceServices.map(service => (
+								<ServiceCard key={service.id} service={service}/>
+							))
+							}
+						</>
 					) : (
-						fitnessServices.map(service => (
-							<ServiceCard key={service.id} service={service}/>
-						))
+						<>
+							<strong>Nordic Track, Sole, Proform, Reebok, Ironman, Bowflex, Horizon, Peleton, Lifespan, Star Trac, Life Fitness, Precor, Landice, and TRUE </strong>
+							{fitnessServices.map(service => (
+								<ServiceCard key={service.id} service={service}/>
+							))
+							}
+						</>
+
 					)}
 				</div>
 			</div>
