@@ -62,6 +62,10 @@ return (
 						       {...register('firstName',
 							       {
 								       required: "First name is required",
+								       pattern: {
+									       value: /^[a-zA-Z]+$/,
+									       message: 'Only letters allowed',
+								       },
 								       maxLength: {
 									       value: 15,
 									       message: "Your name to long"
@@ -83,6 +87,10 @@ return (
 						       {...register('lastName',
 							       {
 								       required: "Last name is required",
+								       pattern: {
+									       value: /^[a-zA-Z]+$/,
+									       message: 'Only letters allowed',
+								       },
 								       maxLength: {
 									       value: 15,
 									       message: "Your Last name to long"
