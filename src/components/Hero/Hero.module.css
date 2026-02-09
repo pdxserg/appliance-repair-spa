@@ -53,6 +53,7 @@
 }
 
 .heroCta {
+    font-size: 1.25rem;
     display: flex;
     gap: 1rem;
     justify-content: center;
