@@ -40,7 +40,7 @@ const Hero = () => {
 								duration={500}
 								className="btn btn-secondary"
 							>
-								Rates
+								Diagnostic Fee
 							</ScrollLinkWrapper>
 						</div>
 					</div>
