@@ -32,7 +32,7 @@ const Rates = () => {
 								<FiMapPin className={styles.rateIcon}/>
 							</div>
 							<div className={styles.rateDetails}>
-								<h3>Local Service - $89</h3>
+								<h3>Local Service - $120</h3>
 								<p>Serving Vancouver, Hazel Dell, Orchards, Salmon Creek, Camas, Washougal, Battle
 									Ground, Brush Prairie, and Ridgefield.</p>
 							</div>
@@ -43,7 +43,7 @@ const Rates = () => {
 								<FiMapPin className={styles.rateIcon}/>
 							</div>
 							<div className={styles.rateDetails}>
-								<h3>Regional Service - $119</h3>
+								<h3>Regional Service - $150+</h3>
 								<p>Serving Woodland, La Center, Amboy, and Yacolt.</p>
 							</div>
 						</div>
@@ -55,7 +55,7 @@ const Rates = () => {
 							<div className={styles.rateDetails}>
 								<h3>Payment Options</h3>
 								<div className={styles.paymentOptions}>
-									<span className={styles.paymentMethod}>Cash</span>
+									<span className={styles.paymentMethod}>Card</span>
 									<span className={styles.paymentMethod}>Check</span>
 									<span className={styles.paymentMethod}>Zelle</span>
 									<span className={styles.paymentMethod}>Venmo</span>
