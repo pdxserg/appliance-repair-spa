@@ -1,6 +1,6 @@
 
 
-import { FiMenu, FiX, FiPhone } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi';
 import styles from './Header.module.css';
 import ScrollLinkWrapper from "../LinkScroll.tsx";
 
@@ -38,10 +38,10 @@ const Header = ({ isScrolled, isNavOpen, toggleNav }: HeaderProps) => {
 					{/*	<FiMail className={styles.icon}/>*/}
 					{/*	<span className={styles.contactText}>kaspianstarus@gmail.com</span>*/}
 					{/*</a>*/}
-					<a href="tel:+13604040169" className={styles.contactItem}>
-						<FiPhone className={styles.icon}/>
-						<span className={styles.contactText}>(360) 404-0169</span>
-					</a>
+					{/*<a href="tel:+13604040169" className={styles.contactItem}>*/}
+					{/*	<FiPhone className={styles.icon}/>*/}
+					{/*	<span className={styles.contactText}>(360) 404-0169</span>*/}
+					{/*</a>*/}
 
 				</div>
 

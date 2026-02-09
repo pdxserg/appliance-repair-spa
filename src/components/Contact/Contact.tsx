@@ -1,5 +1,5 @@
 import styles from './Contact.module.css';
-import { FiMapPin, FiPhone, FiMail, FiClock } from 'react-icons/fi';
+import { FiMapPin, FiMail, FiClock } from 'react-icons/fi';
 
 const Contact = () => {
 	return (
@@ -13,17 +13,17 @@ const Contact = () => {
 							<FiMapPin className={styles.infoIcon} />
 							<div>
 								<h3>Service Area</h3>
-								<p>Clark County, WA - All Cities</p>
+								<p>Clark County - All Cities, WA</p>
 							</div>
 						</div>
 
-						<div className={styles.infoItem}>
-							<FiPhone className={styles.infoIcon} />
-							<div>
-								<h3>Phone</h3>
-								<p><a href="tel:+13604040169">(360) 404-0169</a></p>
-							</div>
-						</div>
+						{/*<div className={styles.infoItem}>*/}
+						{/*	<FiPhone className={styles.infoIcon} />*/}
+						{/*	<div>*/}
+						{/*		<h3>Phone</h3>*/}
+						{/*		<p><a href="tel:+13604040169">(360) 404-0169</a></p>*/}
+						{/*	</div>*/}
+						{/*</div>*/}
 
 						<div className={styles.infoItem}>
 							<FiMail className={styles.infoIcon} />
