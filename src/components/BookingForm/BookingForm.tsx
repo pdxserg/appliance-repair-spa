@@ -206,8 +206,8 @@ return (
 									       message: 'Zip code is incorrect',
 								       },
 								       pattern: {
-									       value: /^(98|97)\d{3}$/,
-									       message: 'Only digits allowed',
+									       value: /^(98)\d{3}$/,
+									       message: 'Sorry, We serve only the Washington Clark County area.',
 								       },
 							       }
 						       )} />
