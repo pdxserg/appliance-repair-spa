@@ -19,7 +19,7 @@ const Services = () => {
 				<p itemProp="description">
 					Our experienced technicians offer fast and affordable repair services for home appliances and
 					fitness equipment
-					in Vancouver WA, Clark County, and Portland OR. We specialize in washer repair, dryer repair,
+					in Vancouver WA, Clark County. We specialize in washer repair, dryer repair,
 					dishwasher
 					repair, fridge repair, treadmill repair, elliptical repair, and more.
 				</p>
